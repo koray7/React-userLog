@@ -55,3 +55,6 @@ form button {
     width: 250px;
     font-size: 18px;
 }
+button{
+    font-size: 10vw;
+}

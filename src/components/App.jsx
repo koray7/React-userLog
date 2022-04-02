@@ -1,59 +1,27 @@
-import React from "react";
-// import Login from "./Login";
-import Form from "./Form";
-
-// var isLoggedIn = false;
-
-// var userIsRegistered = false;
+import React, { useState } from "react";
 
 
-// const strikeThrough = {textDecoration: "line-through"}
+function App() {
 
+    const [count, setCount] = useState(0);
 
-// function renderConditionally() {
-//     if (userIsRegistered === false) {
-//         return <h1>Hello</h1>;
-//     }else {
-//         return <Form />;
-//     }
-// }
+function inc() {
 
-function strike() {
-    document.getElementById("root").style.textDecoration = "line-through";
-    document.getElementById("root").style.color = "red";
-
+    setCount(count+1);
 }
 
-function antiStrike() {
-    document.getElementById("root").style.textDecoration = "none";
-    document.getElementById("root").style.color = "yellow";
+function dec() {
+    setCount(count-1);
 }
 
-
-function App(props) {
 return (
 <div className="container">
-
-    <h1>AUSTIN</h1>
-    <button onClick={strike}>Change</button>
-    <button onClick={antiStrike}>Back</button>
-    
-    
-    
-    
-    {/* <button  onClick={Click1}>Back</button> */}
-
-
-
-
-{/* {renderConditionally()}
-<Form 
-    isRegistered={userIsRegistered}
-/>
-
-{userIsRegistered()} */}
+    <h1>{count}</h1>
+    <button onClick={inc}>+</button>
+    <button onClick={dec}>-</button>
 </div>
 );
 }
+
 
 export default App;
