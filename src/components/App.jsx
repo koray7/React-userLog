@@ -4,8 +4,10 @@ import Form from "./Form";
 
 // var isLoggedIn = false;
 
-var userIsRegistered = true;
+// var userIsRegistered = false;
 
+
+// const strikeThrough = {textDecoration: "line-through"}
 
 
 // function renderConditionally() {
@@ -16,15 +18,40 @@ var userIsRegistered = true;
 //     }
 // }
 
-function App() {
+function strike() {
+    document.getElementById("root").style.textDecoration = "line-through";
+    document.getElementById("root").style.color = "red";
+
+}
+
+function antiStrike() {
+    document.getElementById("root").style.textDecoration = "none";
+    document.getElementById("root").style.color = "yellow";
+}
+
+
+function App(props) {
 return (
 <div className="container">
-{/* {renderConditionally()} */}
+
+    <h1>AUSTIN</h1>
+    <button onClick={strike}>Change</button>
+    <button onClick={antiStrike}>Back</button>
+    
+    
+    
+    
+    {/* <button  onClick={Click1}>Back</button> */}
+
+
+
+
+{/* {renderConditionally()}
 <Form 
     isRegistered={userIsRegistered}
 />
 
-{/* {userIsRegistered()} */}
+{userIsRegistered()} */}
 </div>
 );
 }
