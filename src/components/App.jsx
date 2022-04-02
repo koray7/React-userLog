@@ -3,25 +3,24 @@ import React, { useState } from "react";
 
 function App() {
 
-    const [count, setCount] = useState(0);
+    var today = new Date().toLocaleTimeString();
 
-function inc() {
+    const [time, setTime] = useState(today)
 
-    setCount(count+1);
+
+
+    function getTime(){
+        const timeNow = new Date().toLocaleTimeString();
+        setTime(timeNow)
+        // console.log(timeNow)
+    }
+
+    return (
+        <div className="container">
+            <h1>{time}</h1>
+            <button onClick={getTime}>Get Time</button>
+        </div>
+    )
 }
-
-function dec() {
-    setCount(count-1);
-}
-
-return (
-<div className="container">
-    <h1>{count}</h1>
-    <button onClick={inc}>+</button>
-    <button onClick={dec}>-</button>
-</div>
-);
-}
-
 
 export default App;
