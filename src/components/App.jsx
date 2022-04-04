@@ -3,22 +3,21 @@ import React, { useState } from "react";
 
 function App() {
 
-    var today = new Date().toLocaleTimeString();
 
-    const [time, setTime] = useState(today)
+    const now = new Date().toLocaleTimeString();
+    const [time, setTime] = useState(now)
+    
 
-
-
-    function getTime(){
-        const timeNow = new Date().toLocaleTimeString();
-        setTime(timeNow)
-        // console.log(timeNow)
+    function clicked() {
+    const timeNow = new Date().toLocaleTimeString();
+        setTime(timeNow);
     }
+
 
     return (
         <div className="container">
             <h1>{time}</h1>
-            <button onClick={getTime}>Get Time</button>
+            <button onClick={clicked}>Get Time Austin!</button>
         </div>
     )
 }
