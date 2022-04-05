@@ -2,31 +2,38 @@ import React, { useState } from "react";
 
 function App() {
 
-    const [headingText, setHeadingText] = useState("Hello");
-    const [isMouseOver, setIsMouseOver] = useState(false)
+    const [fname, setFName] = useState("")
+    const [lname, setLname] = useState("")
 
-
-    function handleClick() {
-        setHeadingText("Submitted");
-    }
-    function changeBackground(){
-        setIsMouseOver(true);
-    }
-    function changeBackgroundAgain(){
-        setIsMouseOver(false);
+    function updateFName(some1) {
+        const firstName = some1.target.value
+        setFName(firstName)
     }
 
-return (
-<div className="container">
-    <h1>{headingText}</h1>
-    <input type="text" placeholder="What's your name?" />
-    <button style={{ backgroundColor: isMouseOver ? "yellow" : "white"}} 
-    onClick={handleClick} 
-    onMouseOver={changeBackground} 
-    onMouseOut={changeBackgroundAgain}>
-    Submit</button>
-</div>
-);
+    function updateLName(some1) {
+        const lastName = some1.target.value
+        setLname(lastName)
+    }
+
+    return (
+    <div className="container">
+        <h1>Hello {fname} {lname} </h1>
+        <form>
+            <input 
+            onChange={updateFName} 
+            name="fName" 
+            placeholder="First Name" 
+            value={fname}
+            />
+            <input 
+            onChange={updateLName}
+            value={lname}
+            name="lName" 
+            placeholder="Last Name" />
+            <button>Submit</button>
+        </form>
+    </div>
+    );
 }
 
 export default App;
