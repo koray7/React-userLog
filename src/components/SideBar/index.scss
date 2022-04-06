@@ -14,9 +14,11 @@
     img {
         display: block;
         margin: 8px auto;
-        width: 9vw;
+        width:11vw;
         height: auto;
         margin-top: 6vw;
+        opacity: .8;
+        border-radius: 2vw;
         &.sub-logo {
             width: 50px;
         }

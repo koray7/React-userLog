@@ -6,7 +6,6 @@ import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {
     faLinkedin,
     faGithub,
-    faSkype,
 } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => {
