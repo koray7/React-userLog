@@ -15,19 +15,25 @@ const Sidebar = () => {
                 <a className="logo" href="https://drive.google.com/file/d/1u_mE9EFCArAh_hTZeUjJt5UYFhfpjPFD/view?usp=sharing" download="Koray-Resume.pdf" target="_blank" rel="noReferrer"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDv6iqDOwYY9_i4IT_ZvrFdhPXN2oGQhcLfg&usqp=CAU" id="social-logo" alt='Koray-Resume' />
                 </a>    
             <nav>
-                <NavLink exact="true" activeclassname="active" to="/">
+                <NavLink exact="true" to="/">
                     <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
                 </NavLink>
                 
-                <NavLink activeclassname="active" className="about-link" to="/about">
+                <NavLink className="about-link" to="/about">
                     <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
                 </NavLink>
                 
                 <NavLink
-                    activeclassname="active"
+                
                     className="contact-link"
                     to="/contact">
                 <FontAwesomeIcon icon={faCode} color="#4d4d4e" />
+                </NavLink>
+                <NavLink
+                    activeclassname="active"
+                    className="contact-link"
+                    to="/contact">
+                <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
                 </NavLink>
             </nav>
             <ul>

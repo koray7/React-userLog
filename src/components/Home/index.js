@@ -2,11 +2,11 @@ import Logo from '../../assets/images/Koray-img.jpeg'
 import { Link } from 'react-router-dom'
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters';
-import { useState, useEffect } from 'react';
-
+import { useState } from 'react';
+import Loader from 'react-loaders'
 const Home = () => {
 
-    const [letterClass, setLetterClass] = useState('text-animate')
+    const [letterClass] = useState('text-animate')
 
     const nameArray = ['','','K', 'o', 'r', 'a', 'y','']
     const jobArray = [
@@ -25,13 +25,9 @@ const Home = () => {
     'r',
     '.',
 ]
-useEffect(() => {
-    return setTimeout(() => {
-        setLetterClass('text-animate-hover')
-    }, 4000)
-}, [])
 
     return (
+        <>
         <div className="container home-page">
             <div className="text-zone">
                     <h1><span className={letterClass}>H</span>
@@ -60,6 +56,8 @@ useEffect(() => {
             <img src={Logo} alt="developer" className="self-img"/>
             </div>
         </div>
+        <Loader type="pacman" />
+        </>
     )
 }
 
