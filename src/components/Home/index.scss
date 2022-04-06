@@ -1,5 +1,16 @@
-.home-page {
+.page {
+    background-image: url("https://images.unsplash.com/photo-1623520527569-fee1da87f598?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHNvZnR3YXJlJTIwZW5naW5lZXJ8ZW58MHx8MHx8&w=1000&q=80");
+    background-repeat: no-repeat;
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
+.home-page {
+    
 
     .text-zone {
         position: absolute;
@@ -8,6 +19,8 @@
         transform: translateY(-50%);
         width: 40%;
         max-height: 90%;
+        border-radius: 2vw;
+        padding: 3vw 0;
 }
 
 h1 {
@@ -17,6 +30,7 @@ h1 {
     margin: 0;
     font-family: 'Coolvetica';
     font-weight: 400;
+    line-height: .9;
 
     &:before {
     content: '<h1>';
@@ -25,9 +39,8 @@ h1 {
     font-size: 18px;
     position: absolute;
     margin-top: -40px;
-    left: -15px;
     opacity: 0.6;
-    margin-left: -2vw;
+    left: -7vw;
     }
 
     &:after { 
@@ -39,12 +52,12 @@ h1 {
     margin: 1vw;
     animation: fadeIn 1s 1.7s backwards;
     opacity: 0.6;
-    margin-left: -23vw;
+    left: -8vw;
     }
 
     img {
     margin-left: 20px;
-    opacity: 0;
+    opacity: 0.9;
     width: 32px;
     height: auto;
     animation: rotateIn 1s linear both;
@@ -88,7 +101,7 @@ h2 {
     height: 25vw;
     position: relative;
     float: right;
-    margin: 4vw 12vw;
+    margin: 6vw 10vw auto 12vw;
     border-radius: 4vw;
     opacity: .9;
 }

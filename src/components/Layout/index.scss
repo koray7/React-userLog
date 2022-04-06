@@ -6,8 +6,8 @@
 
 .top-tags {
     bottom: auto;
-    top: 1vw;
-    margin-left: -2vw;
+    top: 0;
+    margin-left: -5vw;
 }
 
 .tags {
@@ -25,6 +25,9 @@
 }
 .top-tag-html {
     margin-left: 2vw;
+}
+.bottom-tags{
+    margin-left: -3vw;
 }
 
 .container {
