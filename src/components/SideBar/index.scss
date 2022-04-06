@@ -1,6 +1,6 @@
 .nav-bar {
     background: #4ab5e2;
-    width: 15vw;
+    width: 12vw;
     height: 100%;
     position: absolute;
     top: 0;
@@ -34,8 +34,8 @@
         margin-top: -120px;
         width: 100%;
     a {
-        font-size: 3vw;
-        color: #4d4d4e;
+        font-size: 2.8vw;
+        color: #e8e8f2;
         display: block;
         line-height: 51px;
         height: 51px;
@@ -60,8 +60,8 @@
 
         &:after {
             content: '';
-            font-size: 3vw;
-            letter-spacing: 2px;
+            font-size: 2vw;
+            letter-spacing: 1px;
             position: absolute;
             bottom: 0;
             display: block;
