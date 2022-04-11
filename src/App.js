@@ -1,25 +1,26 @@
-import { Route, Routes } from 'react-router-dom'
-import Home from './components/Home'
-// import About from './components/About'
-import Contact from './components/Contact'
-import Layout from './components/Layout'
-import './App.scss'
-import About from './components/About/index'
+import React, { useState } from "react";
 
 function App() {
-    return(
-        <div>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route path="about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                </Route>
-            </Routes>
+    const [contact, setContact] = useState({
+    fName: "",
+    lName: "",
+    email: ""
+    });
 
-
-        </div>
-    )
+    return (
+    <div className="container">
+        <h1>
+        Hello {contact.fName} {contact.lName}
+        </h1>
+        <p>{contact.email}</p>
+        <form>
+        <input name="fName" placeholder="First Name" />
+        <input name="lName" placeholder="Last Name" />
+        <input name="email" placeholder="Email" />
+        <button>Submit</button>
+        </form>
+    </div>
+    );
 }
 
 export default App;
