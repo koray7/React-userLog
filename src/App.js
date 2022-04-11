@@ -27,10 +27,9 @@ function App() {
         
         <div className="form">
             <input onChange={handleChange} type="text" value={newPlace} />
-            <button onClick={addItem}>
-                <span>Add</span>
-            </button>
-        
+            <button onClick={addItem}><span>Add</span></button>
+            <button onClick={addItem}><span>Remove</span></button>
+            <button onClick={addItem}><span>Edit</span></button>
         </div>
         <div>
             <ul>
