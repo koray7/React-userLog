@@ -1,5 +1,5 @@
 import React,{ useState } from "react";
-
+import TravelList from "./components/TravelList";
 
 function App() {
 
@@ -18,6 +18,17 @@ function App() {
         setNewPlace("");
     }
 
+
+    const [crossed, setCrossed] = useState(false)
+
+    function handleCrossed() {
+        setCrossed(prevValue => {
+            return !prevValue;
+        });
+    }
+
+
+
     return (
 
     <div className="container">
@@ -29,11 +40,15 @@ function App() {
             <input onChange={handleChange} type="text" value={newPlace} />
             <button onClick={addItem}><span>Add</span></button>
             <button onClick={addItem}><span>Remove</span></button>
-            <button onClick={addItem}><span>Edit</span></button>
+            <button onClick={handleCrossed}><span>Crossed</span></button>
         </div>
         <div>
             <ul>
-                {items.map(todo => <li>{todo}</li>)}
+                {items.map(todo => 
+                <TravelList 
+                text={todo}
+                />
+                )}
             </ul>
         </div>
     </div>
