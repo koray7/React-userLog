@@ -1,20 +1,16 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 
 
 const TravelList = (props) => {
 
-    const [crossed, setCrossed] = useState(false)
-
-    function handleCrossed() {
-        setCrossed(prevValue => {
-            return !prevValue;
-        });
-    }
 
     return (
-    <div onClick={handleCrossed}>
-        <li style={{ textDecoration: crossed ? 'line-through' : "none" }}>
+    <div onClick={() => {
+        props.onChecked(props.id)
+    }}
+    >
+        <li>
         {props.text}
         </li>
     </div>

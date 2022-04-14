@@ -12,22 +12,21 @@ function App() {
     }
 
     function addItem() {
-        setItems( (prevValue) => {
-            return [...prevValue, newPlace]
+        setItems( (prevItems) => {
+            return [...prevItems, newPlace]
         });
         setNewPlace("");
     }
 
-
-    const [crossed, setCrossed] = useState(false)
-
-    function handleCrossed() {
-        setCrossed(prevValue => {
-            return !prevValue;
+    function deleteItem(id) {
+        setItems( (prevItems) => {
+            return prevItems.filter(
+                (item, index) => {
+                    return index !== id
+                }
+            )
         });
     }
-
-
 
     return (
 
@@ -39,16 +38,18 @@ function App() {
         <div className="form">
             <input onChange={handleChange} type="text" value={newPlace} />
             <button onClick={addItem}><span>Add</span></button>
-            <button onClick={addItem}><span>Remove</span></button>
-            <button onClick={handleCrossed}><span>Crossed</span></button>
+            <button onClick={addItem}><span>Delete</span></button>
         </div>
         <div>
             <ul>
-                {items.map(todo => 
+                {items.map((todo, index) => (
                 <TravelList 
+                id={index}
+                key={index}
                 text={todo}
+                onChecked={deleteItem}
                 />
-                )}
+                ))}
             </ul>
         </div>
     </div>
