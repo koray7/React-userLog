@@ -10,8 +10,9 @@ const TravelList = (props) => {
         props.onChecked(props.id)
     }}
     >
-        <li>
+        <li className="list">
         {props.text}
+        <button className="list-btn"><span>Delete</span></button>
         </li>
     </div>
     )

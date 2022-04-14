@@ -38,18 +38,18 @@ function App() {
         <div className="form">
             <input onChange={handleChange} type="text" value={newPlace} />
             <button onClick={addItem}><span>Add</span></button>
-            <button onClick={addItem}><span>Delete</span></button>
         </div>
         <div>
             <ul>
                 {items.map((todo, index) => (
-                <TravelList 
-                id={index}
-                key={index}
-                text={todo}
-                onChecked={deleteItem}
-                />
-                ))}
+                    <TravelList 
+                        id={index}
+                        key={index}
+                        text={todo}
+                        onChecked={deleteItem}
+                    />
+                )
+                )}
             </ul>
         </div>
     </div>

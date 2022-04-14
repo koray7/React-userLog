@@ -84,3 +84,6 @@ li {
     position: relative;
     padding: 0.5rem;
 }
+.list-btn {
+    margin-left: 2vw;
+}
